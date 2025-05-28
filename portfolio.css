@@ -1,0 +1,92 @@
+ /* Modern, clean styling */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fa;
+    margin: 0;
+    padding: 2rem;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  h1 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  }
+  .search-container {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  input[type="search"] {
+    flex-grow: 1;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.05);
+    transition: border-color 0.3s ease;
+  }
+  input[type="search"]:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 8px #3498db;
+  }
+  button#searchBtn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(52,152,219,0.4);
+    transition: background-color 0.3s ease;
+  }
+   button#searchBtn:hover {
+    background: #287dbd;
+  }
+  #message {
+    font-size: 1rem;
+    color: #e74c3c;
+    margin-top: 1rem;
+    min-height: 1.5em;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 6px;
+    background-color: #ffecec;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+  .scrolling-name {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 10s linear infinite;
+    white-space: nowrap;
+    font-weight: 700;
+    color: #2c3e50;
+  }
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  /* Static part of message stays on left side */
+  #message .static-text {
+    margin-right: 1rem;
+    flex-shrink: 0;
+    color: #c0392b;
+  }
